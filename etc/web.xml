@@ -1,0 +1,25 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+version="2.4">
+<welcome-file-list>
+<welcome-file>main</welcome-file>
+</welcome-file-list>
+<servlet>
+<servlet-name>MainController</servlet-name>
+<servlet-class>marekpan.news.web.MainController</servlet-class>
+<init-param>
+<param-name>yandex</param-name>
+<param-value>marekpan.news.model.YandexNews</param-value>
+</init-param>
+<init-param>
+<param-name>mail</param-name>
+<param-value>marekpan.news.model.MailNews</param-value>
+</init-param>
+</servlet>
+<servlet-mapping>
+<servlet-name>MainController</servlet-name>
+<url-pattern>/main</url-pattern>
+</servlet-mapping>
+</web-app>
